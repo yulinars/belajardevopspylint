@@ -1,15 +1,16 @@
-import os, sys, math
+"""Modul contoh fungsi dengan gaya penulisan sesuai PEP 8."""
 
-x = 10
 
-def Bad_Function_Name( A, B, C, D, E, F ):
- global x
- l = 1; O = 0
- if A == True:
-  if B == False:
-   if C == None:
-    try: print(eval("A + B")); res = E[0] + F + l + O
-    except: pass
- else: return None
+def check_values(first, second, third, numbers, extra):
+    """Periksa kondisi input, lalu jumlahkan nilai pertama dengan extra.
 
-Bad_Function_Name(True, False, None, 1, [2], 3)
+    Mengembalikan hasil penjumlahan jika semua kondisi terpenuhi,
+    selain itu mengembalikan None.
+    """
+    if first and not second and third is None:
+        return numbers[0] + extra
+    return None
+
+
+if __name__ == "__main__":
+    print(check_values(True, False, None, [2], 3))
